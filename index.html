@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>You and I Are Polar Opposites Fan Site</title>
+    <link rel="icon" href="./Images/icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="nav-wrap">
+        <nav class="nav" aria-label="Main">
+            <a href="#home" class="logo">POLAR OPPOSITES</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#classmates">Classmates</a></li>
+                <li><a href="#relationships">Relationships</a></li>
+                <li><a href="#story">Story</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">🌙</button>
+            <button class="burger" id="burger" aria-label="Menu"
+                aria-expanded="false"><span></span><span></span><span></span></button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="floaters" id="floaters" aria-hidden="true"></div>
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <h1>You and I Are Polar Opposites</h1>
+                    <p class="sub">“Sometimes the person most different from you is the one who understands you best.”
+                    </p>
+                    <div class="btns"><a class="btn" href="#characters">Explore Characters</a><a class="btn ghost"
+                            href="#classmates">Meet the Classmates</a></div>
+                </div>
+                <div class="hero-art">
+                    <div class="art miyu-art"><img src="./Images/miyu-suzuki.jpg" alt="Miyu Suzuki"
+                            onerror="this.remove()"><b>M</b><small>Place images/miyu-suzuki.jpg</small></div>
+                    <div class="art yuu-art"><img src="./Images/yuusuke-tani.jpg" alt="Yuusuke Tani"
+                            onerror="this.remove()"><b>Y</b><small>Place images/yuusuke-tani.jpg</small></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters" class="section">
+            <h2 class="title reveal">Main Characters</h2>
+            <p class="note reveal">Profiles are short fan-written summaries.</p>
+            <div class="main-grid" id="mainCards"></div>
+        </section>
+
+        <section class="section couple" id="couple">
+            <h2 class="title reveal">Two Opposites. One Connection.</h2>
+            <div class="pair reveal">
+                <div class="art mini miyu-art"><img src="./Images/miyu-suzuki.jpg" alt=""
+                        onerror="this.remove()"><b>M</b></div>
+                <div class="heart-zone">
+                    <div class="mid">Miyu ❤️ Yuusuke</div>
+                    <div class="particles" id="particles"></div>
+                </div>
+                <div class="art mini yuu-art"><img src="./Images/yuusuke-tani.jpg" alt=""
+                        onerror="this.remove()"><b>Y</b></div>
+            </div>
+            <p class="center reveal">Miyu is bright and outgoing; Yuusuke is quiet and careful. Their differences become
+                a way of learning about each other, and the gap between them is where most of the story's warmth and
+                humor comes from.</p>
+            <div class="bars reveal">
+                <div class="bar"><span>Personality Contrast</span>
+                    <div><i data-w="95"></i></div><em>95%</em>
+                </div>
+                <div class="bar"><span>Chemistry</span>
+                    <div><i data-w="90"></i></div><em>90%</em>
+                </div>
+                <div class="bar"><span>Understanding</span>
+                    <div><i data-w="85"></i></div><em>85%</em>
+                </div>
+            </div>
+        </section>
+
+        <section id="classmates" class="section">
+            <h2 class="title reveal">Their Class</h2>
+            <div class="tools reveal">
+                <input type="search" id="search" placeholder="Search characters..." aria-label="Search characters">
+                <div class="filters" id="filters">
+                    <button class="chip active" data-f="all">All</button><button class="chip" data-f="main">Main
+                        Characters</button>
+                    <button class="chip" data-f="friends">Friends</button><button class="chip"
+                        data-f="classmates">Classmates</button>
+                    <button class="chip" data-f="other">Other Characters</button>
+                </div>
+            </div>
+            <div id="groups"></div>
+            <p class="empty" id="empty" hidden>No characters found</p>
+        </section>
+
+        <section class="section" id="favorites">
+            <h2 class="title reveal">My Favorite Characters</h2>
+            <div class="grid" id="favGrid"></div>
+            <p class="empty" id="favEmpty">Tap ♡ Favorite on any card to save it here.</p>
+        </section>
+
+        <section id="relationships" class="section">
+            <h2 class="title reveal">Relationship Map</h2>
+            <p class="note">Click a character to see who they are connected to.</p>
+            <div class="map" id="map"></div>
+            <div class="rel-info" id="relInfo">Select a character above.</div>
+        </section>
+
+        <section id="story" class="section">
+            <h2 class="title reveal">The Story</h2>
+            <div class="timeline" id="timeline"></div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2 class="title reveal">Gallery</h2>
+            <p class="note">Placeholder tiles. Add your own files to <code>images/gallery-1.jpg</code> and so on.</p>
+            <div class="gallery" id="gallery"></div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="title reveal">About the Series</h2>
+            <dl class="info reveal">
+                <div>
+                    <dt>Title</dt>
+                    <dd>You and I Are Polar Opposites</dd>
+                </div>
+                <div>
+                    <dt>Japanese title</dt>
+                    <dd>正反対な君と僕 (Seihantai na Kimi to Boku)</dd>
+                </div>
+                <div>
+                    <dt>Genre</dt>
+                    <dd>Romantic comedy, slice of life, school life</dd>
+                </div>
+                <div>
+                    <dt>Status</dt>
+                    <dd>[Verify current status]</dd>
+                </div>
+                <div>
+                    <dt>Main themes</dt>
+                    <dd>Contrasting personalities, communication, friendship, first romance</dd>
+                </div>
+                <div>
+                    <dt>Setting</dt>
+                    <dd>Japanese high school</dd>
+                </div>
+                <div>
+                    <dt>Author</dt>
+                    <dd>[Verify author / artist credit]</dd>
+                </div>
+                <div>
+                    <dt>Original work</dt>
+                    <dd>[Verify publisher, magazine, and anime studio]</dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="logo">POLAR OPPOSITES</div>
+        <ul class="foot-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#classmates">Classmates</a></li>
+            <li><a href="#relationships">Relationships</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <small>Fan-made project. Not officially affiliated with the creators or rights holders of “You and I Are Polar
+            Opposites”.</small>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+    <div class="modal" id="modal" aria-hidden="true">
+        <div class="modal-box" role="dialog" aria-modal="true"><button class="close" data-close
+                aria-label="Close">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+    <div class="modal lightbox" id="lightbox" aria-hidden="true"><button class="close" data-close
+            aria-label="Close">✕</button>
+        <button class="nv prev" id="prev" aria-label="Previous">‹</button>
+        <figure>
+            <div id="lbImg"></div>
+            <figcaption id="lbCap"></figcaption>
+        </figure>
+        <button class="nv next" id="next" aria-label="Next">›</button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
